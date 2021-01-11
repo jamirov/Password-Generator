@@ -1,7 +1,7 @@
 var generatePasswordButton = document.getElementById("generate");
 
-var onlyUpper = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
-var onlyLower = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+var onlyUpper = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+var onlyLower = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
 var onlySpecial = ['#','$','%','&','(',')','*','+',',','-','.','/',':',';','<','=','>','?','@','['];
 var onlyNumeric = [0,1,2,3,4,5,6,7,8,9];
 
@@ -73,11 +73,11 @@ function generatePassword() {
 
     for (let i = 0; i < options.length; ++i) {
         var randomPicker = Math.floor(Math.random() * Math.floor(passwordPool.length));
-         finalPassword.push(passwordPool[randomPicker])
+        finalPassword.push(passwordPool[randomPicker])
     }
-    var superFinal = finalPassword.join('');
+    var superPassword = finalPassword.join('');
 
-    document.getElementById("password").textContent = superFinal;
+    document.getElementById("password").textContent = superPassword;
 }
 
 generatePasswordButton.addEventListener("click", generatePassword);
