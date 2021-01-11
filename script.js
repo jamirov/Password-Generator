@@ -50,28 +50,28 @@ function generatePassword() {
     var passwordPool = [];
 
     if (options.specialCharacters) {
-        for (i = 0; i < onlySpecial.length; ++i) {
+        for (i = 0; i < onlySpecial.length; i++) {
             passwordPool.push(onlySpecial[i]);
         }
     } 
     if (options.numeric) {
-        for (i = 0; i < onlyNumeric.length; ++i) {
+        for (i = 0; i < onlyNumeric.length; i++) {
         passwordPool.push(onlyNumeric[i]);
         }
     }
     if (options.lowerCase) {
-        for (i = 0; i < onlyLower.length; ++i) {
+        for (i = 0; i < onlyLower.length; i++) {
         passwordPool.push(onlyLower[i]);
         }
     }
     if (options.upperCase) {
-        for (i = 0; i < onlyUpper.length; ++i) {
+        for (i = 0; i < onlyUpper.length; i++) {
         passwordPool.push(onlyUpper[i]);
         }
     }
     var finalPassword = [];
 
-    for (let i = 0; i < options.length; ++i) {
+    for (let i = 0; i < options.length; i++) {
         var randomPicker = Math.floor(Math.random() * Math.floor(passwordPool.length));
         finalPassword.push(passwordPool[randomPicker])
     }
