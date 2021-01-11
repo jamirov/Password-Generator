@@ -1,4 +1,4 @@
-# This is Password-Generator.
+# This is a Password-Generator.
 Here is the screen shot of the page: 
-![Screen Shot](Assets/Passsword Gen Screenshot.png)
+![Screen Shot](Assets/Screenshot.png)
 
