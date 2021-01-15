@@ -31,13 +31,13 @@ function generatePassword() {
     
     //prompt user for uppercase characters
     var shouldIncludeUppercase = confirm("Do you want to include uppercase characters?");
-    
+    // alets and stops user if aything picked
     if (!shouldIncludeLowercase && !shouldIncludeUppercase && !shouldIncludeNumeric && !shouldIncludeSpecialCharacters) {
         alert("Your password must contain at least one special, numeric, lowercase or uppercase character");
         return;
     }
     var passwordPool = [];
-
+// adding special characters to the password pool array 
     if (shouldIncludeSpecialCharacters) {
         for (i = 0; i < onlySpecial.length; i++) {
             passwordPool.push(onlySpecial[i]);
@@ -59,13 +59,14 @@ function generatePassword() {
         }
     }
     var finalPassword = [];
-
+// selecting a final password from password pool
     for (let i = 0; i < passwordLength; i++) {
         var randomIndex = Math.floor(Math.random() * passwordPool.length);
         finalPassword.push(passwordPool[randomIndex]);
     }
+    //  removing quotes and comas from final password
     var superPassword = finalPassword.join('');
-
+// display final password
     document.getElementById("password").textContent = superPassword;
 }
 generatePasswordButton.addEventListener("click", generatePassword);
